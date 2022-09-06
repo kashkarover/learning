@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <button type="submit" id="alert">alert</button>
+    <button type="submit" id="prompt">promt</button>
+    <button type="submit" id="confirm">confirm</button>
+  </body>
+  <script>
+    document.querySelector('#alert').onclick = function () {
+      alert('Привет');
+    };
+    document.querySelector('#promt').onclick = function () {
+      let age = prompt('Сколько тебе лет?');
+      alert(`Тебе ${age} лет!`);
+    };
+    document.querySelector('#confirm').onclick = function () {
+      let isBoss = confirm('Ты здесь главный?');
+      alert(isBoss);
+    };
+  </script>
+</html>
