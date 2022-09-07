@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>if else</title>
+  </head>
+  <body>
+    <button class="" id="ifelse">If Else</button>
+    <button class="" id="ternary">Ternary</button>
+  </body>
+  <script>
+    document.querySelector('#ifelse').onclick = function () {
+      let sum = prompt('Сколько будет 5+5?');
+      if (sum > 10) {
+        alert('Это больше чем правильный ответ');
+      } else if (sum != Number) {
+        alert('Вы ввели не число');
+      } else if (sum < 10) {
+        alert('Это меньше чем ответ');
+      } else if (sum == 10) {
+        alert('Правильно!');
+      }
+    };
+    document.querySelector('#ternary').onclick = function () {
+      let age = prompt('Возраст?', 18);
+      let message =
+        age < 3
+          ? 'Здравствуй, малыш!'
+          : age < 18
+          ? 'Привет!'
+          : age < 100
+          ? 'Здравствуйте!'
+          : 'Какой необычный возраст!';
+      alert(message);
+    };
+  </script>
+</html>
