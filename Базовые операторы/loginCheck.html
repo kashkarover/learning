@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Проверка логина</title>
+  </head>
+  <body>
+    <p style="width: 500px">
+      Напишите код, который будет спрашивать логин с помощью prompt. Если
+      посетитель вводит «Админ», то prompt запрашивает пароль, если ничего не
+      введено или нажата клавиша Esc – показать «Отменено», в противном случае
+      отобразить «Я вас не знаю». Пароль проверять так: Если введён пароль «Я
+      главный», то выводить «Здравствуйте!», Иначе – «Неверный пароль», При
+      отмене – «Отменено». Пароль 2246
+    </p>
+  </body>
+  <script>
+    let userName = 'Админ';
+    let password;
+
+    userName = prompt('Кто там?');
+
+    if (userName === 'Админ') {
+      password = prompt('Введите пароль');
+      if (password === '2246') {
+        alert('Добро пожаловать!');
+      } else if (password === '' || password === null) {
+        alert('Отменено');
+      } else {
+        alert('Неправильный пароль');
+      }
+    } else if (userName === '' || userName === null) {
+      alert('Отменено');
+    } else {
+      alert('Я вас не знаю');
+    }
+  </script>
+</html>
