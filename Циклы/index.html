@@ -15,12 +15,37 @@
       только числа. Предусматривать обработку нечисловых строк в этой задаче
       необязательно.
     </p>
+    <button id="num">Проверить</button>
+    <p style="width: 500px">
+      Перепишите код с использованием одной конструкции switch:
+    </p>
+    <img src="1.jpg" alt="" style="display: block; margin-bottom: 10px" />
+    <button id="switch">Проверить</button>
   </body>
   <script>
-    //let num;
+    document.querySelector('#num').onclick = function () {
+      let num;
+      do {
+        num = prompt('Введите число больше 100?', 0);
+      } while (num <= 100 && num);
+    };
+    document.querySelector('#switch').onclick = function () {
+      const number = +prompt('Введите число между 0 и 3', '');
 
-    do {
-      let num = prompt('Введите число больше 100?', 0);
-    } while (num <= 100 && num);
+      switch (number) {
+        case 0:
+          alert('Вы ввели число 0');
+          break;
+        case 1:
+          alert('Вы ввели число 1');
+          break;
+        case 2:
+        case 3:
+          alert('Вы ввели число 2, а может и 3');
+          break;
+        default:
+          alert('Это число не находится между 0 и 3');
+      }
+    };
   </script>
 </html>
