@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p style="width: 500px">
+      /Напишите функцию pow(x,n), которая возвращает x в степени n. Иначе
+      говоря, умножает x на себя n раз и возвращает результат. P.S. В этой
+      задаче функция обязана поддерживать только натуральные значения n, т.е.
+      целые от 1 и выше. Создайте страницу, которая запрашивает x и n, а затем
+      выводит результат pow(x,n).
+    </p>
+    <button id="pow">Проверить</button>
+  </body>
+  <script>
+    document.querySelector('#pow').onclick = function () {
+      function pow(x, n) {
+        let result = x ** n;
+        return result;
+      }
+
+      let x = +prompt('Введите x:');
+      let n = +prompt('Введите n:');
+
+      if (n > 0 && Number.isInteger(n)) {
+        alert(pow(x, n));
+      } else {
+        alert('n должен быть натуральным числом');
+      }
+    };
+  </script>
+</html>
