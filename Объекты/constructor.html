@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="1.jpg" alt="" />
+    <button class="" id="calc" style="display: block">Проверить</button>
+    <img src="2.jpg" alt="" style="margin-top: 25px" />
+    <button class="" id="acc" style="display: block">Проверить</button>
+  </body>
+  <script>
+    document.querySelector('#calc').onclick = function () {
+      function Calculator() {
+        this.read = function () {
+          this.a = +prompt('Введите a');
+          this.b = +prompt('Введите b');
+        };
+
+        this.sum = function () {
+          return this.a + this.b;
+        };
+
+        this.mul = function () {
+          return this.a * this.b;
+        };
+      }
+
+      let calculator = new Calculator();
+      calculator.read();
+      alert('Sum=' + calculator.sum());
+      alert('Mul=' + calculator.mul());
+    };
+    document.querySelector('#acc').onclick = function () {
+      function Accumulator(startingValue) {
+        this.value = startingValue;
+        this.read = function () {
+          let a = +prompt('Введите число');
+          this.value += a;
+        };
+      }
+
+      let accumulator = new Accumulator(10);
+      accumulator.read();
+      accumulator.read();
+      accumulator.read();
+      accumulator.read();
+      accumulator.read();
+      accumulator.read();
+      alert(accumulator.value);
+      console.log(accumulator);
+    };
+  </script>
+</html>
