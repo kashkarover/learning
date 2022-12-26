@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="elem">
+      <div id="elem-content">Element</div>
+      <div>
+        <ul>
+          <li>Этот</li>
+          <li>тест</li>
+        </ul>
+        <ul>
+          <li>полностью</li>
+          <li>пройден</li>
+        </ul>
+      </div>
+    </div>
+    <a href="http://example.com/file.zip">...</a>
+    <a href="http://ya.ru">...</a>
+
+    <script>
+      //window['elem-content'].style.background = 'yellow';
+      let elem = document.getElementById('elem');
+      elem.style.background = 'red';
+
+      //   let elements = document.querySelectorAll('ul > li:last-child');
+      //   for (let elems of elements) {
+      //     alert(elems.innerHTML);
+      //   }
+
+      for (let elems of document.body.children) {
+        if (elems.matches('a[href$="zip"]')) {
+          alert('Ссылка на архив: ' + elems.href);
+        }
+      }
+    </script>
+  </body>
+</html>
